@@ -52,8 +52,8 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public void deletePerson(UUID bookId) {
-        personRepository.deleteById(bookId);
-        log.info("Person with id: {} was deleted", bookId);
+    public void deletePerson(UUID personId) {
+        personRepository.deleteById(personId);
+        log.info("Person with id: {} was deleted", personId);
     }
 }

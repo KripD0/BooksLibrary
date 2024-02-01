@@ -16,5 +16,5 @@ public interface PersonService {
 
     void editPerson(UUID personId, PersonDto personDto);
 
-    void deletePerson(UUID bookId);
+    void deletePerson(UUID personId);
 }
