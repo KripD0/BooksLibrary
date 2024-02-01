@@ -16,7 +16,7 @@ git clone https://github.com/KripD0/BooksLibrary.git
 ***
 # Getting started
 
-A stopped postgresql is required to start the application. 
+Postgresql is required to start the application. 
 Before launching, it is necessary in the application.yaml set your username and password to connect to the database
 
 ![img.png](aplication-settings.png)
