@@ -1,1 +1,18 @@
+server:
+  port: 8088
 
+spring:
+  liquibase:
+    change-log: classpath:liquibase/databasechangelog.xml
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    default-schema: bookslibrary
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
