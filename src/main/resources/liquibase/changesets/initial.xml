@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+
+    <changeSet id="create-tables" author="KripDo">
+
+        <createTable tableName="person">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="lastName" type="varchar"/>
+            <column name="firstName" type="varchar"/>
+            <column name="patronymic" type="varchar"/>
+            <column name="birthday" type="date"/>
+        </createTable>
+
+        <createTable tableName="book">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="author" type="varchar"/>
+            <column name="isbn" type="varchar"/>
+        </createTable>
+
+        <createTable tableName="library_checkout_record">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="takenDateTime" type="timestamp"/>
+            <column name="person_id" type="bigint">
+                <constraints foreignKeyName="library_checkout_record_person_fk_id" references="person(id)"/>
+            </column>
+            <column name="book_id" type="bigint">
+                <constraints foreignKeyName="library_checkout_record_book_fk_id" references="book(id)"/>
+            </column>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="person"/>
+            <dropTable tableName="book"/>
+            <dropTable tableName="library_checkout_record"/>
+        </rollback>
+
+        <comment>
+            Creating tables
+        </comment>
+
+    </changeSet>
+
+
+</databaseChangeLog>

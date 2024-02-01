@@ -16,3 +16,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
+
+
+bookslibrary:
+  controller:
+    basePath: api/v1
