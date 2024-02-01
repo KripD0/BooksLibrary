@@ -22,7 +22,7 @@ public class LibraryCheckoutController {
     private final BookService bookService;
 
     @GetMapping
-    public String checkout(Model model, @ModelAttribute("checkoutRecord") LibraryCheckoutRecord libraryCheckoutRecord) {
+    public String takeBook(Model model, @ModelAttribute("checkoutRecord") LibraryCheckoutRecord libraryCheckoutRecord) {
         model.addAttribute("books", bookService.getBooks());
         model.addAttribute("people", personService.getPeople());
         return "takeBook";

@@ -1,4 +1,4 @@
-package com.example.bookslibrary.web.dto;
+package com.example.bookslibrary.web.rest.dto;
 
 import lombok.Data;
 

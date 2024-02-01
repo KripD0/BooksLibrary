@@ -3,7 +3,7 @@ package com.example.bookslibrary.service.impl;
 import com.example.bookslibrary.db.model.LibraryCheckoutRecord;
 import com.example.bookslibrary.db.repository.LibraryCheckoutRecordRepository;
 import com.example.bookslibrary.service.interfaces.LibraryCheckoutRecordService;
-import com.example.bookslibrary.web.dto.SliceDto;
+import com.example.bookslibrary.web.rest.dto.SliceDto;
 import com.example.bookslibrary.web.rest.dto.LibraryCheckoutRecordDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

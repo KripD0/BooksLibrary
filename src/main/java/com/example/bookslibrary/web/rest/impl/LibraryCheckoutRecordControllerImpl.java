@@ -1,7 +1,7 @@
 package com.example.bookslibrary.web.rest.impl;
 
 import com.example.bookslibrary.service.interfaces.LibraryCheckoutRecordService;
-import com.example.bookslibrary.web.dto.SliceDto;
+import com.example.bookslibrary.web.rest.dto.SliceDto;
 import com.example.bookslibrary.web.rest.dto.LibraryCheckoutRecordDto;
 import com.example.bookslibrary.web.rest.interfaces.LibraryCheckoutRecordController;
 import lombok.RequiredArgsConstructor;
