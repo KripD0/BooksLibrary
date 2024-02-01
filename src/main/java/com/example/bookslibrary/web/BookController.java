@@ -1,4 +1,4 @@
-package com.example.bookslibrary.web.impl;
+package com.example.bookslibrary.web;
 
 import com.example.bookslibrary.service.interfaces.BookService;
 import com.example.bookslibrary.web.dto.BookDto;
@@ -18,7 +18,7 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/books")
 @RequiredArgsConstructor
-public class BookControllerImpl {
+public class BookController {
 
     private final BookService bookService;
 

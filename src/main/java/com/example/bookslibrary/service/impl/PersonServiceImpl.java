@@ -25,7 +25,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Person> getPeoples() {
+    public List<Person> getPeople() {
         log.info("Getting persons");
         return personRepository.findAll();
     }

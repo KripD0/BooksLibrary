@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public interface PersonService {
 
-    List<Person> getPeoples();
+    List<Person> getPeople();
 
     Person getById(UUID personId);
 

@@ -1,4 +1,4 @@
-package com.example.bookslibrary.web.impl;
+package com.example.bookslibrary.web;
 
 import com.example.bookslibrary.service.interfaces.PersonService;
 import com.example.bookslibrary.web.dto.PersonDto;
@@ -18,13 +18,13 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/people")
 @RequiredArgsConstructor
-public class PersonControllerImpl {
+public class PersonController {
 
     private final PersonService personService;
 
     @GetMapping
     public String persons(Model model) {
-        model.addAttribute("people", personService.getPeoples());
+        model.addAttribute("people", personService.getPeople());
         return "peoples";
     }
 
