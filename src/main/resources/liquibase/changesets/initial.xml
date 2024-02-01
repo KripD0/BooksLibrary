@@ -7,32 +7,33 @@
     <changeSet id="create-tables" author="KripDo">
 
         <createTable tableName="person">
-            <column name="id" type="bigint">
+            <column name="id" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="lastName" type="varchar"/>
-            <column name="firstName" type="varchar"/>
+            <column name="last_name" type="varchar"/>
+            <column name="first_name" type="varchar"/>
             <column name="patronymic" type="varchar"/>
             <column name="birthday" type="date"/>
         </createTable>
 
         <createTable tableName="book">
-            <column name="id" type="bigint">
+            <column name="id" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
+            <column name="title" type="varchar"/>
             <column name="author" type="varchar"/>
             <column name="isbn" type="varchar"/>
         </createTable>
 
         <createTable tableName="library_checkout_record">
-            <column name="id" type="bigint">
+            <column name="id" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="takenDateTime" type="timestamp"/>
-            <column name="person_id" type="bigint">
+            <column name="taken_date_time" type="timestamp"/>
+            <column name="person_id" type="uuid">
                 <constraints foreignKeyName="library_checkout_record_person_fk_id" references="person(id)"/>
             </column>
-            <column name="book_id" type="bigint">
+            <column name="book_id" type="uuid">
                 <constraints foreignKeyName="library_checkout_record_book_fk_id" references="book(id)"/>
             </column>
         </createTable>
