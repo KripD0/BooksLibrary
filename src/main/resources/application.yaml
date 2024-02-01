@@ -25,11 +25,6 @@ spring:
         default_schema: bookslibrary
 
 
-springdoc:
-  swagger-ui:
-    path: /swag
-
-
 bookslibrary:
   controller:
     basePath: api/v1
